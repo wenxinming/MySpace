@@ -1,22 +1,21 @@
 <template>
-  <NavBar></NavBar>
-  <router-view/>
+  <NavBar />
+  <router-view :key="$route.fullPath"/>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue';
-import  'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
+import NavBar from './components/NavBar';
+
 export default {
-  name:"APP",
-  components:{
-    NavBar
+  name: "App",
+  components: {
+    NavBar,
   }
 }
+
 </script>
 
-
-
 <style>
-
 </style>
